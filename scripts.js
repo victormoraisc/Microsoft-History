@@ -3,6 +3,17 @@ let activeText = document.getElementById(`slide-content-1`);
 function openSlide(target){
   let slide = document.getElementById(target);
   slide.classList.remove("hidden");
+  resetActiveText(target);
+  activeText.classList.remove("hidden");
+}
+function closeWindow(target){
+  let slide = document.getElementById(target);
+  slide.classList.add("hidden");
+  activeText.classList.add("hidden");
+  resetActiveText(target);
+}
+function resetActiveText(target)
+{
   switch (target) {
     case "world":
       activeText = document.getElementById(`slide-content-1`);
@@ -19,10 +30,7 @@ function openSlide(target){
     default:
       break;
   }
-}
-function closeWindow(target){
-  let slide = document.getElementById(target);
-  slide.classList.add("hidden")
+  
 }
 function maximizeWindow(target){
   let slide = document.getElementById(target);

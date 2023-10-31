@@ -328,12 +328,11 @@
 .slide-content-text{
     overflow-y: auto;
     width: 50%;
-    height: 80%;
+    height: 70%;
 }
 .slide-content h2{
     font-size: 36px;
     width: 50%;
-    white-space: nowrap;
 }
 .slide-content ul{
     font-size: 30px;
