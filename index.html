@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>História da Microsoft</title>
+    <link rel="stylesheet" href="\styles.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <img class="background" src="/assets/background.jpg" alt="background">
+            <div class="container__nav-bar">
+                <div class="nav-bar__start">
+                    <img class="start__logo" src="/assets/logo.png" alt="logo">
+                    <span class="start__name">INICIAR</span>
+                </div>
+                <div class="nav-bar__options">
+                    <div class="options__icons">
+                        <img class="icons" src="/assets/shield.png" alt="shield">
+                        <img class="icons" src="/assets/speaker.png" alt="speaker" style="margin-top: 0.38vh">
+                    </div>
+                    <div class="options__time">
+                        <span class="time">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="container__desktop">
+                <div class="desktop__icons" id="recycle-bin">
+                    <img class="desktop__icon" src="/assets/recycle-bin.png" alt="recycle-bin">
+                    <p class="icon__title">Lixeira</p>
+                </div>
+                <div class="desktop__icons" id="historia-mundo" onclick="openSlide('world')">
+                    <img class="desktop__icon" src="/assets/world.png" alt="Mundo">
+                    <p class="icon__title">História no Mundo</p>
+                </div>
+                <div class="desktop__icons" id="historia-brasil" onclick="openSlide('brazil')">
+                    <img class="desktop__icon" src="/assets/brazil.png" alt="Mundo">
+                    <p class="icon__title">História no Brasil</p>
+                </div>
+                <div class="desktop__icons" id="principais-tecnologias" onclick="openSlide('tech')">
+                    <img class="desktop__icon" src="/assets/tech.png" alt="Mundo">
+                    <span class="icon__title">Principais Tecnologias</span>
+                </div>
+                <div class="desktop__icons" id="contribuicoes" onclick="openSlide('contributions')">
+                    <img class="desktop__icon" src="/assets/society.png" alt="Mundo">
+                    <span class="icon__title">Principais Contribuições</span>
+                </div>
+            </div>
+
+
+            <div class="slide hidden" id="world">
+                <div class="slide-header" id="world-slide-header">
+                    <img class="slide-header__icon" src="/assets/world.png" alt="Mundo">
+                    <span class="slide-header__title">História da Microsoft no Mundo</span>
+                    <div class="slide-header__window-commands">
+                        <div class="window-commands__minimize"><div></div></div>
+                        <div class="window-commands__maximize" onclick="maximizeWindow('world')"><div></div></div>
+                        <div class="window-commands__close" onclick="closeWindow('world')"><div>X</div></div>
+                    </div>
+                </div>
+                <div class="slide-nav">
+                    <div class="slide-nav-top">
+                        <ul>
+                            <li>Arquivo</li>
+                            <li>Editar</li>
+                            <li>Exibir</li>
+                            <li>Ferramentas</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </div>
+                    <div class="slide-nav-middle">
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-1.png" alt="1">
+                            <img src="/assets/toolbar-2.png" alt="2">
+                            <img src="/assets/toolbar-3.png" alt="3">
+                        </div>
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-4.png" alt="4">
+                            <img src="/assets/toolbar-5.png" alt="5">
+                        </div>
+                        <div class="slide-nav-middle__toolbar" style="border: 0">
+                            <img src="/assets/toolbar-6.png" alt="6">
+                        </div>
+                    </div>
+
+                    <div class="slide-nav-bottom">
+                        <div class="nav-bottom__toolbar" style="width: 12%; min-width: 90px; justify-content: center;"><span>Endereço</span></div>
+                        <div class="nav-bottom__toolbar" style="width: 83%;">
+                            <div class="fake-input__container" style="position: relative; width: 97%;">
+                                <img src="/assets/pc-icon.png">
+                                <input type="text" id="fakeinput" name="fakeinput" value="História da Microsoft no Mundo"/>
+                                <div class="dropdown-icon" style="position: absolute; right: 0"></div>
+                            </div>
+                        </div>
+                        <div class="nav-bottom__toolbar" style="width: 5%; min-width: 48px;">
+                            <img src="/assets/greenGo.png" alt="grenGo">
+                            <span>Ir</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content__container">
+                    <div class="slide-sidebar">
+                        <div class="slide-sidebar__container">
+                            <ul class="slide-sidebar__titles">
+                                <li class="slide-title1" onclick="changeText(1)">Lorem Ipsum</li>
+                                <li class="slide-title2" onclick="changeText(2)">Lorem Ipsum</li>
+                                <li class="slide-title3" onclick="changeText(3)">Lorem Ipsum</li>
+                                <li class="slide-title4" onclick="changeText(4)">Lorem Ipsum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slide-content" id="slide-content-1">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 1 
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-2">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 2
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-3">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 3
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-4">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 4
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="slide hidden" id="brazil">
+                <div class="slide-header" id="brazil-slide-header">
+                    <img class="slide-header__icon" src="/assets/brazil.png" alt="Mundo">
+                    <span class="slide-header__title">História da Microsoft no Brasil</span>
+                    <div class="slide-header__window-commands">
+                        <div class="window-commands__minimize"><div></div></div>
+                        <div class="window-commands__maximize" onclick="maximizeWindow('brazil')"><div></div></div>
+                        <div class="window-commands__close" onclick="closeWindow('brazil')"><div>X</div></div>
+                    </div>
+                </div>
+                <div class="slide-nav">
+                    <div class="slide-nav-top">
+                        <ul>
+                            <li>Arquivo</li>
+                            <li>Editar</li>
+                            <li>Exibir</li>
+                            <li>Ferramentas</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </div>
+                    <div class="slide-nav-middle">
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-1.png" alt="1">
+                            <img src="/assets/toolbar-2.png" alt="2">
+                            <img src="/assets/toolbar-3.png" alt="3">
+                        </div>
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-4.png" alt="4">
+                            <img src="/assets/toolbar-5.png" alt="5">
+                        </div>
+                        <div class="slide-nav-middle__toolbar" style="border: 0">
+                            <img src="/assets/toolbar-6.png" alt="6">
+                        </div>
+                    </div>
+    
+                    <div class="slide-nav-bottom">
+                        <div class="nav-bottom__toolbar" style="width: 12%; min-width: 90px; justify-content: center;"><span>Endereço</span></div>
+                        <div class="nav-bottom__toolbar" style="width: 83%;">
+                            <div class="fake-input__container" style="position: relative; width: 97%;">
+                                <img src="/assets/pc-icon.png">
+                                <input type="text" id="fakeinput" name="fakeinput" value="História da Microsoft no Brasil"/>
+                                <div class="dropdown-icon" style="position: absolute; right: 0"></div>
+                            </div>
+                        </div>
+                        <div class="nav-bottom__toolbar" style="width: 5%; min-width: 48px;">
+                            <img src="/assets/greenGo.png" alt="grenGo">
+                            <span>Ir</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content__container">
+                    <div class="slide-sidebar">
+                        <div class="slide-sidebar__container">
+                            <ul class="slide-sidebar__titles">
+                                <li class="slide-title1" onclick="changeText(5)">Lorem Ipsum</li>
+                                <li class="slide-title2" onclick="changeText(6)">Lorem Ipsum</li>
+                                <li class="slide-title3" onclick="changeText(7)">Lorem Ipsum</li>
+                                <li class="slide-title4" onclick="changeText(8)">Lorem Ipsum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slide-content" id="slide-content-5">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 1 
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-6">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 2
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-7">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 3
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-8">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 4
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slide hidden" id="tech">
+                <div class="slide-header" id="microsoft-slide-header">
+                    <img class="slide-header__icon" src="/assets/tech.png" alt="Mundo">
+                    <span class="slide-header__title">Principais Tecnologias da Microsoft</span>
+                    <div class="slide-header__window-commands">
+                        <div class="window-commands__minimize"><div></div></div>
+                        <div class="window-commands__maximize" onclick="maximizeWindow('tech')"><div></div></div>
+                        <div class="window-commands__close" onclick="closeWindow('tech')"><div>X</div></div>
+                    </div>
+                </div>
+                <div class="slide-nav">
+                    <div class="slide-nav-top">
+                        <ul>
+                            <li>Arquivo</li>
+                            <li>Editar</li>
+                            <li>Exibir</li>
+                            <li>Ferramentas</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </div>
+                    <div class="slide-nav-middle">
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-1.png" alt="1">
+                            <img src="/assets/toolbar-2.png" alt="2">
+                            <img src="/assets/toolbar-3.png" alt="3">
+                        </div>
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-4.png" alt="4">
+                            <img src="/assets/toolbar-5.png" alt="5">
+                        </div>
+                        <div class="slide-nav-middle__toolbar" style="border: 0">
+                            <img src="/assets/toolbar-6.png" alt="6">
+                        </div>
+                    </div>
+    
+                    <div class="slide-nav-bottom">
+                        <div class="nav-bottom__toolbar" style="width: 12%; min-width: 90px; justify-content: center;"><span>Endereço</span></div>
+                        <div class="nav-bottom__toolbar" style="width: 83%;">
+                            <div class="fake-input__container" style="position: relative; width: 97%;">
+                                <img src="/assets/pc-icon.png">
+                                <input type="text" id="fakeinput" name="fakeinput" value="Principais Tecnologias da Microsoft"/>
+                                <div class="dropdown-icon" style="position: absolute; right: 0"></div>
+                            </div>
+                        </div>
+                        <div class="nav-bottom__toolbar" style="width: 5%; min-width: 48px;">
+                            <img src="/assets/greenGo.png" alt="grenGo">
+                            <span>Ir</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content__container">
+                    <div class="slide-sidebar">
+                        <div class="slide-sidebar__container">
+                            <ul class="slide-sidebar__titles">
+                                <li class="slide-title1" onclick="changeText(9)">Lorem Ipsum</li>
+                                <li class="slide-title2" onclick="changeText(10)">Lorem Ipsum</li>
+                                <li class="slide-title3" onclick="changeText(11)">Lorem Ipsum</li>
+                                <li class="slide-title4" onclick="changeText(12)">Lorem Ipsum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slide-content" id="slide-content-9">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 1 
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-10">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 2
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-11">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 3
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-12">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 4
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="slide hidden" id="contributions">
+                <div class="slide-header" id="contributions-slide-header">
+                    <img class="slide-header__icon" src="/assets/society.png" alt="Mundo">
+                    <span class="slide-header__title">Principais Contribuições da Microsoft na SI</span>
+                    <div class="slide-header__window-commands">
+                        <div class="window-commands__minimize"><div></div></div>
+                        <div class="window-commands__maximize" onclick="maximizeWindow('contributions')"><div></div></div>
+                        <div class="window-commands__close" onclick="closeWindow('contributions')"><div>X</div></div>
+                    </div>
+                </div>
+                <div class="slide-nav">
+                    <div class="slide-nav-top">
+                        <ul>
+                            <li>Arquivo</li>
+                            <li>Editar</li>
+                            <li>Exibir</li>
+                            <li>Ferramentas</li>
+                            <li>Ajuda</li>
+                        </ul>
+                    </div>
+                    <div class="slide-nav-middle">
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-1.png" alt="1">
+                            <img src="/assets/toolbar-2.png" alt="2">
+                            <img src="/assets/toolbar-3.png" alt="3">
+                        </div>
+                        <div class="slide-nav-middle__toolbar">
+                            <img src="/assets/toolbar-4.png" alt="4">
+                            <img src="/assets/toolbar-5.png" alt="5">
+                        </div>
+                        <div class="slide-nav-middle__toolbar" style="border: 0">
+                            <img src="/assets/toolbar-6.png" alt="6">
+                        </div>
+                    </div>
+    
+                    <div class="slide-nav-bottom">
+                        <div class="nav-bottom__toolbar" style="width: 12%; min-width: 90px; justify-content: center;"><span>Endereço</span></div>
+                        <div class="nav-bottom__toolbar" style="width: 83%;">
+                            <div class="fake-input__container" style="position: relative; width: 97%;">
+                                <img src="/assets/pc-icon.png">
+                                <input type="text" id="fakeinput" name="fakeinput" value="Principais Tecnologias da Microsoft"/>
+                                <div class="dropdown-icon" style="position: absolute; right: 0"></div>
+                            </div>
+                        </div>
+                        <div class="nav-bottom__toolbar" style="width: 5%; min-width: 48px;">
+                            <img src="/assets/greenGo.png" alt="grenGo">
+                            <span>Ir</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide-content__container">
+                    <div class="slide-sidebar">
+                        <div class="slide-sidebar__container">
+                            <ul class="slide-sidebar__titles">
+                                <li class="slide-title1" onclick="changeText(13)">Lorem Ipsum</li>
+                                <li class="slide-title2" onclick="changeText(14)">Lorem Ipsum</li>
+                                <li class="slide-title3" onclick="changeText(15)">Lorem Ipsum</li>
+                                <li class="slide-title4" onclick="changeText(16)">Lorem Ipsum</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="slide-content" id="slide-content-13">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 1 
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-14">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 2
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-15">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 3
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                    <div class="slide-content hidden" id="slide-content-16">
+                        <h2 class="slide-content-title">
+                            Lorem Ipsum 4
+                        </h2>
+                        <p class="slide-content-text">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam at lorem purus. Maecenas at laoreet metus, ut rhoncus lacus. Aliquam commodo sapien non quam sollicitudin malesuada. Mauris ante velit, scelerisque eu feugiat id, tempus id urna. Maecenas sagittis ornare sapien, in facilisis risus luctus quis. Donec placerat dolor eu libero mattis, id blandit turpis lobortis. Etiam bibendum mauris libero, a faucibus urna bibendum sed. In sit amet elit malesuada, varius velit vel, vehicula eros. Cras at venenatis felis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris ac dui ut turpis dapibus accumsan. Vestibulum non justo tempor, hendrerit arcu in, vulputate urna. Nunc lobortis odio in lorem tincidunt malesuada. Ut rhoncus, leo vitae eleifend tincidunt, ex nunc convallis risus, a consequat urna est id metus. Nullam augue nulla, sagittis id massa ac, rutrum lobortis est. Integer sit amet magna orci.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+    <script src="\scripts.js"></script>
+</body>
+</html>
